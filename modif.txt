@@ -1,0 +1,105 @@
+    if (event.type == "keyup") {
+        switch(event.key) {
+            case 'ArrowUp':
+                verif();
+            break;
+            case 'ArrowRight':
+                verif();
+            break;
+            case 'ArrowLeft':
+                verif();
+            break;
+            case 'ArrowDown':
+                verif();
+            break;
+        }
+    }
+
+    function verif() {
+        let rubyOnGround=0;
+        for (let i=0; i<7; i++) {
+            for (let j=0; j<7; j++) {
+                if (Link.toTile(i,j).classList.contains('ruby')) {
+                    rubyOnGround++;
+                }
+            }
+        }
+        if(rubyOnGround==0){
+            victory.style.display = "flex";
+        }
+    
+    }
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+    animateDiv(".a");
+    animateDiv(".b");
+    animateDiv(".c");
+    animateDiv(".d");
+    animateDiv(".e");
+    animateDiv(".f");
+    animateDiv(".g");
+    animateDiv(".h");
+    animateDiv(".i");
+    animateDiv(".j");
+    animateDiv(".k");
+    animateDiv(".l");
+    animateDiv(".m");
+    animateDiv(".n");
+    animateDiv(".o");
+});
+
+function makeInitPosition() {
+
+    var h = 460;
+    var w = 1366;
+    
+    var posY = Math.floor(Math.random() * h);
+    var posX = Math.floor(Math.random() * w);
+    
+    return [posY,posX]; 
+}
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];     
+}
+
+for (i = 0; i < 7; i++) {
+    placeLuciol(yellowLuciols[i]);
+    placeLuciol(blueLuciols[i]);
+  }
+
+
+function animateDiv(myclass){
+    var moveDelay = Math.floor(Math.random() * 8000 + 11000);
+    var newq = makeNewPosition();
+    $(myclass).animate({ top: newq[0], left: newq[1] }, moveDelay,   function(){
+      animateDiv(myclass);        
+    });
+    
+};
+
+function placeLuciol(myclass){
+
+    var initp = makeInitPosition();
+    myclass.style.left = initp[0] + "px"; 
+    myclass.style.top = initp[1] + "px"; 
+ 
+  console.log("Faire un pas vers l'est");
+}

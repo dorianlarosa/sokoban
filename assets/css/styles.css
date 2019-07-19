@@ -1,0 +1,735 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "police";
+  src: url("../font/EXEPixelPerfect.ttf");
+}
+
+#accueil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://images3.alphacoders.com/190/190129.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#accueil #container-accueil {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #00000079;
+  padding: 0px 20%;
+}
+
+#accueil #container-accueil #container-logo {
+  margin-top: 60px;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+#accueil #container-accueil #container-logo .rotating {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+
+#accueil #container-accueil h2 {
+  font-family: "police";
+  margin-top: 20px;
+  color: white;
+  font-size: 35px;
+}
+
+@media screen and (max-width: 992px) {
+  #accueil #container-accueil h2 {
+    font-size: 30px !important;
+  }
+}
+
+#accueil #container-accueil p {
+  color: white;
+  text-align: start !important;
+  font-family: "police";
+  font-size: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  #accueil #container-accueil p {
+    font-size: 15px !important;
+  }
+}
+
+#accueil #container-accueil .arrowkey {
+  height: 50px;
+  width: 80px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 20px;
+}
+
+#accueil #container-accueil #btnPlay {
+  height: 42px;
+  width: 124px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../img/boutons/play.png");
+  cursor: pointer;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+#accueil #container-accueil #btnPlay:hover {
+  height: 42px;
+  width: 124px;
+  background-image: url("../img/boutons/play_hover.png");
+  cursor: pointer;
+}
+
+header {
+  background-color: black;
+  height: 20vh;
+}
+
+header h1 {
+  color: white;
+  font-family: "police" !important;
+  font-size: 4em;
+  cursor: default;
+}
+
+@media screen and (max-width: 992px) {
+  header h1 {
+    font-size: 2em;
+  }
+}
+
+header .level {
+  cursor: default;
+  font-size: 2em !important;
+}
+
+@media screen and (max-width: 992px) {
+  header .level {
+    font-size: 1.5em !important;
+    line-height: 0.7em;
+  }
+}
+
+header p {
+  color: white;
+  font-family: "police";
+  font-size: 45px;
+  margin: 0px;
+  line-height: 30px;
+  padding: 0;
+  text-align: center;
+  cursor: default;
+}
+
+@media screen and (max-width: 992px) {
+  header p {
+    font-size: 1.5em;
+    line-height: 0.7em;
+  }
+}
+
+header #score {
+  color: #58b950;
+  font-family: "police";
+  font-size: 45px;
+  margin: 0px !important;
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 992px) {
+  header #score {
+    font-size: 1.5em;
+  }
+}
+
+header .help {
+  background-image: url(../img/boutons/help.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: auto 20px;
+  height: 40px;
+  width: 130px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  header .help {
+    margin: auto 20px;
+    height: 30px;
+    width: 95px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header .help {
+    margin: auto 5px;
+    height: 20px;
+    width: 63px;
+  }
+}
+
+header .help:hover {
+  background-image: url(../img/boutons/help_hover.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: auto 20px;
+  height: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  header .help:hover {
+    margin: auto 20px;
+    height: 30px;
+    width: 95px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header .help:hover {
+    margin: auto 5px;
+    height: 20px;
+    width: 63px;
+  }
+}
+
+header .restart {
+  background-image: url(../img/boutons/restart.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto 20px;
+  width: 52px;
+  height: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  header .restart {
+    margin: auto 20px;
+    width: 29px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header .restart {
+    margin: auto 5px;
+    height: 20px;
+    width: 21px;
+  }
+}
+
+header .restart:hover {
+  background-image: url(../img/boutons/restart_hover.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: auto 20px;
+  width: 52px;
+  height: 50px;
+}
+
+@media screen and (max-width: 992px) {
+  header .restart:hover {
+    margin: auto 20px;
+    width: 29px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header .restart:hover {
+    margin: auto 5px;
+    height: 20px;
+    width: 21px;
+  }
+}
+
+header .level {
+  color: white;
+  font-family: "police";
+  font-size: 35px;
+}
+
+#accueil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://images3.alphacoders.com/190/190129.jpg");
+  background-size: cover;
+  background-position: center center;
+  z-index: 10;
+}
+
+#accueil #container-accueil {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #00000079;
+  padding: 0px 20%;
+}
+
+#accueil #container-accueil #container-logo {
+  margin-top: 60px;
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+#accueil #container-accueil #container-logo .rotating {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+
+#accueil #container-accueil h2 {
+  font-family: "police";
+  margin-top: 20px;
+  color: white;
+  font-size: 35px;
+}
+
+#accueil #container-accueil p {
+  color: white;
+  text-align: center;
+  font-family: "police";
+  font-size: 20px;
+}
+
+#accueil #container-accueil .arrowkey {
+  height: 50px;
+  width: 80px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 20px;
+}
+
+#accueil #container-accueil #btnPlay {
+  height: 42px;
+  width: 124px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../img/boutons/play.png");
+  cursor: pointer;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+#accueil #container-accueil #btnPlay:hover {
+  height: 42px;
+  width: 124px;
+  background-image: url("../img/boutons/play_hover.png");
+  cursor: pointer;
+}
+
+#game {
+  background-image: url("http://image.jeuxvideo.com/images/wu/z/e/zelda-wii-u-wii-u-wiiu-1402422003-002.jpg");
+  background-size: cover;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  #game {
+    height: 60vh;
+  }
+}
+
+#game #container-luciol {
+  position: absolute;
+  height: 70vh;
+  margin-top: 20vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  #game #container-luciol {
+    height: 60vh;
+  }
+}
+
+#game #container-luciol .yellow-luciol {
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/luciol_yellow.png");
+  background-size: cover;
+  position: absolute;
+}
+
+#game #container-luciol #azerty {
+  left: 0;
+  top: 0;
+}
+
+#game #container-luciol .blue-luciol {
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-image: url("../img/luciol_blue.png");
+  background-size: cover;
+  position: absolute;
+}
+
+#game .container-game {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#game .container-game #mute_btn {
+  position: absolute;
+  left: 110px;
+  top: 40px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  #game .container-game #mute_btn {
+    display: none;
+    left: 30px;
+    top: 20px;
+  }
+}
+
+#game .container-game .game-board {
+  display: -ms-grid;
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.562);
+  -ms-grid-columns: 7vh 7vh 7vh 7vh 7vh 7vh 7vh 7vh 7vh;
+      grid-template-columns: 7vh 7vh 7vh 7vh 7vh 7vh 7vh 7vh 7vh;
+  -ms-grid-rows: 7vh 7vh 7vh 7vh 7vh 7vh 7vh 7vh 7vh;
+      grid-template-rows: 7vh 7vh 7vh 7vh 7vh 7vh 7vh 7vh 7vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 992px) {
+  #game .container-game .game-board {
+    -ms-grid-rows: 5vh 5vh  5vh  5vh  5vh   5vh  5vh  5vh  5vh !important;
+        grid-template-rows: 5vh 5vh  5vh  5vh  5vh   5vh  5vh  5vh  5vh !important;
+    -ms-grid-columns: 5vh 5vh  5vh  5vh  5vh   5vh  5vh  5vh  5vh !important;
+        grid-template-columns: 5vh 5vh  5vh  5vh  5vh   5vh  5vh  5vh  5vh !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #game .container-game .game-board {
+    -ms-grid-columns: 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh;
+        grid-template-columns: 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh;
+    -ms-grid-rows: 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh;
+        grid-template-rows: 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh 6vh;
+  }
+}
+
+#game .container-game .game-board .wall {
+  background-image: url("../img/three.png");
+  background-size: 100% 100%;
+}
+
+#game .container-game .game-board .ruby {
+  background-image: url("../img/rubi.png");
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#game .container-game .game-board .hole {
+  background-image: url("../img/hole.png");
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#game .container-game .game-board .ruby_hole {
+  background-image: url("../img/ruby_hole.png");
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#game .container-game .game-board #link {
+  display: block;
+  height: 80%;
+  margin: 10% auto 0 auto;
+  width: auto;
+}
+
+#game #victory {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 70vh;
+  background-image: url("http://image.jeuxvideo.com/images/wu/z/e/zelda-wii-u-wii-u-wiiu-1402422003-002.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+  display: none;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#game #victory .btn-restart {
+  width: 57px;
+  height: 52px;
+  background-image: url("../img/boutons/restart.png");
+  background-position: center center;
+  cursor: pointer;
+}
+
+#game #victory .btn-restart:hover {
+  background-image: url("../img/boutons/restart_hover.png");
+}
+
+#game #victory .btn-next {
+  width: 125px;
+  height: 40px;
+  background-image: url("../img/boutons/next.png");
+  background-position: center center;
+  cursor: pointer;
+}
+
+#game #victory .btn-next:hover {
+  background-image: url("../img/boutons/next_hover.png");
+}
+
+#game #help {
+  display: none;
+  position: absolute;
+  height: 70vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.863);
+  font-family: 'police';
+  opacity: 1;
+  -webkit-animation: fadeInFromNone 1s forwards;
+          animation: fadeInFromNone 1s forwards;
+}
+
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#game #help .close {
+  position: absolute;
+  right: 18%;
+  top: 115px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#game #help .close:hover {
+  opacity: 1;
+}
+
+#game #help .close:before, #game #help .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: white;
+}
+
+#game #help .close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#game #help .close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#game #help .rules {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 0px 150px;
+}
+
+#game #help .rules h3 {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+#game #help .rules p {
+  padding: 0px 50px;
+  color: white;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+footer {
+  background-color: black;
+  font-family: "police";
+  font-size: 20px;
+  color: white;
+  height: 10vh;
+  position: relative;
+}
+
+@media screen and (max-width: 992px) {
+  footer {
+    height: 20vh;
+  }
+}
+
+footer #container-control {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* à 50%/50% du parent référent */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+footer #container-control #control {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6vh 6vh;
+      grid-template-columns: 6vh 6vh;
+  -ms-grid-rows: 6vh 6vh;
+      grid-template-rows: 6vh 6vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: auto;
+  height: 12vh;
+  width: 12vh;
+}
+
+footer #container-control #control #arrow-top {
+  height: 5vh;
+  margin: auto;
+  cursor: pointer;
+}
+
+footer #container-control #control #arrow-right {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  height: 5vh;
+  margin: auto;
+  cursor: pointer;
+}
+
+footer #container-control #control #arrow-left {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  height: 5vh;
+  margin: auto;
+  cursor: pointer;
+}
+
+footer #container-control #control #arrow-bottom {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  height: 5vh;
+  margin: auto;
+  cursor: pointer;
+}
+
+footer p {
+  margin: 0 !important;
+}
+/*# sourceMappingURL=styles.css.map */

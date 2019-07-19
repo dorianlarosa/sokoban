@@ -1,0 +1,5 @@
+0 : empty
+1 : ruby
+2 : hole
+3 : player
+4 : ruby/hole

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/img/perso_soko.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Sokoban</title>
+</head>
+
+<body>
+    <header class="container-fluid d-flex flex-column justify-content-center">
+        <div class="container">
+            <div class="row  d-flex justify-content-between">
+                <div>
+                    <h1 class="mt-auto mb-auto">SOKOBAN</h1>
+                    <h2 class="level">LEVEL 1</h2>
+
+                    <select id="choixLvl" class="d-none" size="1">
+                        <option selected>LEVEL 1</option>
+                        <option>LEVEL 2</option>
+                        <option>LEVEL 3</option>
+                    </select>
+
+                </div>
+
+                <div class="right d-flex">
+                    <div class="counter d-flex justify-content-center mr-4 ml-sm-0">
+                        <div class="mt-auto mb-auto d-flex flex-column ">
+                            <p>SCORE<p>
+                                    <p id="score">00000</p>
+                        </div>
+                        <!-- <div class="ml-4 mt-auto mb-auto">
+                        <p>TIME<br><span id="time">00:00</span></p>
+
+                    </div> -->
+                    </div>
+                    <div class="container-btn d-flex">
+                        <div id="btnHelp" class="help" onmousedown="epee.play()"></div>
+                        <!-- <div id="btnValid" class="valid" onmousedown="epee.play()"></div> -->
+                        <div id="btnRestart" class="restart" onmousedown="epee.play()"></div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div id="accueil">
+        <div id="container-accueil" class="d-flex flex-column justify-content-around">
+            <div id="container-logo" class=" d-flex flex-row justify-content-center">
+                <img src="assets/img/rubi.png" class="rotating" height="60" alt="">
+                <img src="assets/img/perso_soko.png" height="60" alt="">
+                <img src="assets/img/rubi.png" class="rotating" height="60" alt="">
+            </div>
+            <h2> The rules of the game</h2>
+            <p>The objective of this game is to move chest to designated locations by pushing them.
+                These chests are located inside a room surrounded by walls. The user controls a pusher called "Sokoban"
+                which is said to mean something like "warehouse keeper" in Japanese.
+                The pusher can move up, down, left and right, but cannot pass through walls or boxes, and can only push
+                one box at a time.
+                At any time, a square can only be occupied by either a wall, a box, or the pusher.</p>
+            <img src="https://www.pinclipart.com/picdir/big/197-1976635_pixel-art-maker-arrows-keys-png-clipart.png"
+                class="arrowkey" height="500" width="650" alt="">
+            <div id="btnPlay" class="btn-play" onmousedown="epee.play()"></div>
+        </div>
+    </div>
+
+    <section class="container-fluid d-flex flex-row justify-content-center" id="game">
+
+        <div id="container-luciol">
+            <div id="azerty" class="a yellow-luciol"></div>
+            <div class="b yellow-luciol"></div>
+            <div class="c yellow-luciol"></div>
+            <div class="e yellow-luciol"></div>
+            <div class="f yellow-luciol"></div>
+            <div class="g yellow-luciol"></div>
+            <div class="h yellow-luciol"></div>
+            <div class="i blue-luciol"></div>
+            <div class="j blue-luciol"></div>
+            <div class="k blue-luciol"></div>
+            <div class="l blue-luciol"></div>
+            <div class="m blue-luciol"></div>
+            <div class="n blue-luciol"></div>
+            <div class="o blue-luciol"></div>
+        </div>
+        <div class="container-game d-flex flex-row justify-content-center">
+            <img src="assets/img/boutons/sound_on.png" id="mute_btn" onclick="enableMute()" height="30" alt="">
+            <div class="game-board">
+
+
+
+
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div id="r0c0" class="empty"></div>
+                <div id="r0c1" class="empty"></div>
+                <div id="r0c2" class="empty"></div>
+                <div id="r0c3" class="empty"></div>
+                <div id="r0c4" class="empty"></div>
+                <div id="r0c5" class="empty"></div>
+                <div id="r0c6" class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div id="r1c0" class="empty "></div>
+                <div id="r1c1" class="empty"></div>
+                <div id="r1c2" class="empty"></div>
+                <div id="r1c3" class="empty"></div>
+                <div id="r1c4" class="empty"></div>
+                <div id="r1c5" class="empty"></div>
+                <div id="r1c6" class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div id="r2c0" class="empty"></div>
+                <div id="r2c1" class="empty"></div>
+                <div id="r2c2" class="empty"></div>
+                <div id="r2c3" class="empty"></div>
+                <div id="r2c4" class="empty"></div>
+                <div id="r2c5" class="empty"></div>
+                <div id="r2c6" class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div id="r3c0" class="empty"></div>
+                <div id="r3c1" class="empty"></div>
+                <div id="r3c2" class="empty"></div>
+                <div id="r3c3" class="empty"></div>
+                <div id="r3c4" class="empty"></div>
+                <div id="r3c5" class="empty"></div>
+                <div id="r3c6" class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div id="r4c0" class="empty"></div>
+                <div id="r4c1" class="empty"></div>
+                <div id="r4c2" class="empty"></div>
+                <div id="r4c3" class="empty"></div>
+                <div id="r4c4" class="empty"></div>
+                <div id="r4c5" class="empty"></div>
+                <div id="r4c6" class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div id="r5c0" class="empty"></div>
+                <div id="r5c1" class="empty"></div>
+                <div id="r5c2" class="empty"></div>
+                <div id="r5c3" class="empty"></div>
+                <div id="r5c4" class="empty"></div>
+                <div id="r5c5" class="empty"></div>
+                <div id="r5c6" class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div id="r6c0" class="empty"></div>
+                <div id="r6c1" class="empty"></div>
+                <div id="r6c2" class="empty"></div>
+                <div id="r6c3" class="empty"></div>
+                <div id="r6c4" class="empty"></div>
+                <div id="r6c5" class="empty"></div>
+                <div id="r6c6" class="empty"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+
+
+
+            </div>
+
+
+
+            <div class="container-fluid" id="help">
+                <div id="close" class="close"></div>
+                <div class="container rules">
+                    <h3>The rules of the game</h3>
+                    <p>The objective of this game is to move chest to designated locations by pushing them.
+                        These chests are located inside a room surrounded by walls. The user controls a pusher called
+                        "Sokoban" which is said to mean something like "warehouse keeper" in Japanese.
+                        The pusher can move up, down, left and right, but cannot pass through walls or boxes, and can
+                        only push one box at a time.
+                        At any time, a square can only be occupied by either a wall, a box, or the pusher.</p>
+                </div>
+            </div>
+
+            <div id="victory" class=" flex-column justify-content-center">
+
+                <img src="assets/img/trophe.png" alt="" class="d-block ml-auto mr-auto mb-3">
+                <div class="container-btn d-block ml-auto mr-auto mt-3">
+
+                    <div id="btnNext" class="btn-next d-inline-block ml-2" onmousedown="epee.play()"></div>
+
+                </div>
+
+            </div>
+
+    </section>
+
+    <footer class="container-fluid d-flex flex-column justify-content-center">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center d-lg-none">
+
+
+                <div id="container-control">
+                    <div id="control">
+                        <img src="assets/img/boutons/aarrow.png" id="arrow-top" alt="">
+                        <img src="assets/img/boutons/aarrow.png" id="arrow-right" alt="">
+                        <img src="assets/img/boutons/aarrow.png" id="arrow-left" alt="">
+                        <img src="assets/img/boutons/aarrow.png" id="arrow-bottom" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="d-none row d-lg-flex justify-content-between ">
+                <p>Projet réalisé par : Meriem, Maxime, Dorian et Léa</p>
+                <p> En collaboration avec ACS</p>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
